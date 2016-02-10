@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/../../sTeX/sty/etc,/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/../lib/LaTeXML/resources/Package,/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test"?>
+<?latexml class="article"?>
+<?latexml package="omdoc"?>
+<?latexml package="statements"?>
+<?latexml package="modules"?>
+<?latexml package="stex2html"?>
+<?latexml RelaxNGSchema="ltxml+omdoc"?>
+<document xmlns="http://omdoc.org/ns" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:stex="http://kwarc.info/ns/sTeX"><resource src="LaTeXML.css" type="text/css"/><resource src="ltx-article.css" type="text/css"/>
+<theory xmlns="http://omdoc.org/ns" about="#foo" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=1;0,to=6;12)" xml:id="foo">
+<symbol about="#foo.symbol1" name="mybar" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=2;0,to=2;32)" xml:id="foo.symbol1"/><notation about="#foo.notation2" cd="foo" name="mybar" stex:macro_name="mybar" stex:nargs="1" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=2;0,to=2;32)" xml:id="foo.notation2">
+      <prototype>
+        <m:apply>
+          <m:csymbol cd="foo" cr="fun">mybar</m:csymbol>
+          <expr name="arg1"/>
+        </m:apply>
+      </prototype>
+      <rendering>
+        <Math about="#foo.notation2.m1" stex:srcref="Anonymous String#textrange(from=0;1,to=0;0)" text="overline@(arg:1)" xml:id="foo.notation2.m1">
+          <XMath>
+            <XMApp>
+              <XMTok name="overline" role="OVERACCENT">¯</XMTok>
+              <XMTok role="ID">arg:1</XMTok>
+            </XMApp>
+          </XMath>
+        </Math>
+      </rendering>
+    </notation>
+<symbol about="#mybar.def.sym" name="mybar" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;0,to=5;16)" xml:id="mybar.def.sym"/><definition about="#fooa" for="bar mybar" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;0,to=5;16)" xml:id="fooa">
+      <CMP about="#fooa.CMP1" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;0,to=5;16)" xml:id="fooa.CMP1">
+        <p about="#fooa.CMP1.p1" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;0,to=3;34)" xml:id="fooa.CMP1.p1">testing <term about="#fooa.CMP1.p1.term1" cd="foo" name="mybar" role="definiendum" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;13,to=4;21)" xml:id="fooa.CMP1.p1.term1">mybar</term> is <Math about="#fooa.CMP1.p1.m1" mode="inline" stex:srcref="/Users/Hang/kwarc/LaTeXML-Plugin-sTeX-experimental/test/test.tex#textrange(from=3;5,to=4;33)" tex="\bar{b}" text="bar@(b)" xml:id="fooa.CMP1.p1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok name="bar" role="OVERACCENT" stretchy="false">¯</XMTok>
+                <XMTok font="italic" role="UNKNOWN">b</XMTok>
+              </XMApp>
+            </XMath>
+          </Math>.</p>
+      </CMP>
+    </definition>
+</theory>
+<!--  %% “begin–module˝[id=bar] 
+     %% “importmodule–foo˝
+     %% testing $a^x + 3 -“mybar–b˝$.
+     %% “end–module˝
+     %%
+     %% “begin–axiom˝[id=newFoo]
+     %%  $ “pi $ is used to calculate the area of a circle.
+     %% “end–axiom˝--></document>
+
